@@ -25,7 +25,11 @@ SECRET_KEY = '+1gx6l@deb2bcfam)@l3wmqnxva+e*)is@--sk4b1**_v5#0h$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'codefish.pythonanywhere.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
