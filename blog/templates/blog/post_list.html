@@ -3,22 +3,21 @@
 	<head>
 		<title>Jarda's blog</title>
 	</head>
+
 	<body>
-		<div>
-			<h1>Jarda's blog</h1>
-		</div>
 
 		<div>
-			<p>published: 30.12.2016, 15:45</p>
-			<h2>My first post</h2>
-			<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<h1><a href="/">Jarda's blog</a></h1>
 		</div>
 
-		<div>
-			<p>published: 30.12.2016, 15:50</p>
-			<h2>My second post</h2>
-			<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-		</div>
+		{% for post in posts %}
+			<div>
+				<p>published: {{post.published_date}}</p>
+				<h1><a href="">{{post.title}}</a></h1>
+				<p>{{post.text|linebreaksbr}}</p>
+			</div>
+		{% endfor %}
+		
 	</body>
 	
 </html>
